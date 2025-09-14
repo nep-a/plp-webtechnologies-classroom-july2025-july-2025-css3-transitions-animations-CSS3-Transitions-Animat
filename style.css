@@ -1,0 +1,61 @@
+/* Global Styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 2rem;
+  background: #f7f7f7;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+/* ===========================
+   Part 1: CSS Transitions & Animations
+=========================== */
+
+/* Button hover with transition */
+.cool-btn {
+  background-color: #6200ea;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cool-btn:hover {
+  background-color: #3700b3;
+  transform: scale(1.1);
+}
+
+/* Animated box with keyframes */
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background-color: #03dac5;
+  margin: 20px auto;
+  border-radius: 12px;
+  animation: pulse 3s infinite;
+}
+
+/* Keyframes for continuous animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); background-color: #018786; }
+  100% { transform: scale(1); }
+}
+
+/* ===========================
+   Part 3: JavaScript Triggered Animation
+=========================== */
+.animate {
+  animation: moveBox 1s forwards;
+}
+
+@keyframes moveBox {
+  from { transform: translateY(0); background-color: #03dac5; }
+  to { transform: translateY(150px) rotate(360deg); background-color: #ff0266; }
+}
